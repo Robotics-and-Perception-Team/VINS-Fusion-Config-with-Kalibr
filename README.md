@@ -40,7 +40,7 @@ For main config.yaml file:
 VINS-Fusion requires the matrix T_imu_cam for each camera, which means where each camera if the we set the imu to be at point (0, 0, 0)
 But Kalibr provides us with T_cam_imu.
 To find T_imu_cam, we need to take the T_cam_imu matrices and inverse them.
-You can do that using numpy.linalg.inv() function in python.
+You can do that by inputing the array as a 4x4 numpy array and using numpy.linalg.inv() function in python.
 
 Then replace the matrices body_T_camX in the config file with the inversed matrix. (note that the matrix should be in 1D array format for that to work)
 
